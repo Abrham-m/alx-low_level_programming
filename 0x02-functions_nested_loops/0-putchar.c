@@ -6,18 +6,14 @@
 
 int main(void)
 {
-	char a[8];
-	char *c;
-
-	a[8] = "_putchar";
-
-	c = a;
-
-	while (*c != '\0')
-	{
-		putchar(*c);
-		c++;
-	}
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
 	putchar('\n');
 	return (0);
 
