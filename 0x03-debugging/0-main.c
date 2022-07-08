@@ -3,9 +3,7 @@
 /**
  * main - test function that prints if integer
  * Return: 0
- * positive_or_negative(int i) - djfs
  */
-
 int main(void)
 {
 	int i;
