@@ -1,8 +1,6 @@
-#include "main.h"
 
 /**
  * print_most_numbers - prints the numbers interleaved
- * Return: numbers
  */
 
 void print_most_numbers(void)
