@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <cstring.h>
 
 void _putchar(char);
 
