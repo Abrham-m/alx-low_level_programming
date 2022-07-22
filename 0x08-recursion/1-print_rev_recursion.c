@@ -7,19 +7,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	char *e;
-	char temp;
-	int l, i;
-
-	e = s;
-	l = strlen(s);
-	for (i = 0; i < l - 1; i++)
-		e++;
-	for (i = 0; i < l / 2; i++)
+	if (*s != '\0')
 	{
-		temp = *s;
-		*s = *e;
-		*e = temp;
+		_print_rev_recursion(s + 1);
+		putchar(*s);
 	}
-	puts(s);
 }
