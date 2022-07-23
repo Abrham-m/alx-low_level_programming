@@ -1,9 +1,27 @@
 #include "main.h"
+#include <math.h>
 
 /**
- * _sqrt_recursion - is a function that returns radican answers
- * @n: is a number
- * Return: 0 or the answer
+ * checker - is a function
+ * @m: is a variable
+ * @p: is a variable
+ * Return: answer
+ */
+
+int checker(int m, int p)
+{
+	if ((p * p) == m)
+		return (p);
+	else if ((p * p) > m)
+		return (-1);
+	else
+		return (checker(m, p + 1));
+}
+
+/**
+ * _sqrt_recursion - is
+ * @n: variable
+ * Return: 0 or zero
  */
 
 int _sqrt_recursion(int n)
@@ -11,5 +29,5 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 	else
-		return (sqrt(n));
+		return (checker(n, 0));
 }
