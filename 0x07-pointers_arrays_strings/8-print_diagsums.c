@@ -1,29 +1,21 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_diagsums - is a function
- * @a: pointer
- * @size: integer
+ * print_diagsums - description
+ * @a: 2d array of int types
+ * @size: size of array (square)
  */
 
 void print_diagsums(int *a, int size)
 {
-	int i, sum, j;
-
-	sum = 0;
+	int i, sum1 = 0, sum2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		sum = sum + a[i][i];
+		sum1 += a[i];
+		sum2 += a[size - i - 1];
+		a += size;
 	}
-	printf("%d, ", sum);
-	j = size - 1;
-	sum = 0;
-
-	for (i = 0; i < size; i++)
-	{
-		sum = sum + a[j][i];
-		j--;
-	}
-	printf("%d", sum);
+	printf("%d, ", sum1);
+	printf("%d\n", sum2);
 }
