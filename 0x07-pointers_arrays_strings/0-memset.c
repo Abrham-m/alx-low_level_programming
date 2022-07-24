@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * *_memset - is 
- * @s:
- * @b:
- * @n:
+ * *_memset - is
+ * @s: pointer
+ * @b: character
+ * @n: size of integer
  * Return: 0
  */
 
