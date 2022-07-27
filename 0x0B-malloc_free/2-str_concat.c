@@ -1,30 +1,43 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * alloc_grid -
- * @width: o
- * @height: p
- * Return: 0
+ * str_concat - concatenates 2 strings
+ *
+ * @s1: first string
+ * @s2: string to add to end of of first string
+ *
+ * Return: pointer to newly allocated string concatenation
  */
-
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	if ( width <= 0 || height <= 0)
-		return (NULL);
-	
-	int *a;
-	int b[height][width];
-	int x,j,i;
+	unsigned int size1 = 0, size2 = 0;
+	char *ptr, *ret;
 
-	a = malloc(sizeof(*a) * (height * width));
-	x = 0;
-	for (i = 0; i < height - 1; i++)
-	{
-		for(j = 0; j < width - 1; j++)
-		{
-			a[x] = b[i][j] = 0;
-			x++;
-		}
-	}
-	return (b);
+	ptr = s1;
+	if (s1)
+		while (*ptr++)
+			size1++;
+	else
+		s1 = "";
+
+	ptr = s2;
+	if (s2)
+		while (*ptr++)
+			size2++;
+	else
+		s2 = "";
+
+	ret = malloc(size1 + size2 + 1);
+	if (!ret)
+		return (NULL);
+
+	ptr = ret;
+	while (*s1)
+		*ptr++ = *s1++;
+	while (*s2)
+		*ptr++ = *s2++;
+	*ptr = 0;
+
+	return (ret);
 }
