@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <ctype.h>
 /**
  * _isdigit - is afunction that check if it is digit or not
  * @c: is input character
