@@ -1,4 +1,6 @@
-#ifndef ABSO
-#define ABSO
-#define ABS(X) (((x) < (0)) ? (-(x) : (x)))
+#ifndef LIKEMACRO_H
+#define LIKEMACRO_H
+
+#define ABS(X) ((X) < 0 ? -(1) * (X) : (X))
+
 #endif
