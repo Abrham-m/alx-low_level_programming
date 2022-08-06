@@ -4,7 +4,7 @@
 /**
  * print_numbers - is a function
  * @separator: is a pointer to char
- * @n: is an integer
+ * @n: is an intmeger
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
