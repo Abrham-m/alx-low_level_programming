@@ -22,9 +22,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		ptr = va_arg(vl, char *);
 		if (ptr == NULL)
 			printf("nel");
-		printf(ptr);
+		printf("%s",ptr);
 		ptr == NULL;
 		if (i != n - 1)
-			printf(separator);
+			printf("%s",separator);
 	}
 }
