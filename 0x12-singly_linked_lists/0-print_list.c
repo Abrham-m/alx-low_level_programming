@@ -3,6 +3,18 @@
 #include <stdio.h>
 
 /**
+ * list_s - is
+ * list_t - is
+ */
+
+typedef struct list_s
+{
+    char *str;
+    unsigned int len;
+    struct list_s *next;
+} list_t;
+
+/**
  * print_list - is
  * @h: is apointer
  * Return: an integer
